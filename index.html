@@ -6,174 +6,215 @@
     <title>Privacy Policy - RoadReady G1 Ontario</title>
     <style>
         body {
-            font-family: sans-serif;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            line-height: 1.7;
             margin: 0 auto;
             max-width: 800px;
-            padding: 20px;
-            color: #333;
+            padding: 25px;
+            color: #333333;
+            background-color: #f9f9f9;
         }
         h1 {
             text-align: center;
-            color: #222;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
+            color: #1a1a1a;
+            border-bottom: 2px solid #eeeeee;
+            padding-bottom: 15px;
+            font-size: 1.8em;
+            margin-bottom: 25px;
         }
         h2 {
-            color: #444;
-            margin-top: 30px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
+            color: #2a2a2a;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #dddddd;
+            padding-bottom: 8px;
+            font-size: 1.4em;
         }
         h3 {
-            color: #555;
-            margin-top: 20px;
+            color: #444444;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.15em;
         }
         ul {
-            padding-left: 20px;
+            padding-left: 25px;
+            margin-bottom: 15px;
         }
         li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
-        strong {
-            font-weight: bold;
+        p {
+            margin-bottom: 15px;
+        }
+        strong, b {
+            font-weight: 600; /* Semibold for better readability */
         }
         a {
-            color: #0066cc;
+            color: #007AFF; /* Apple blue for links */
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
         .placeholder {
-            background-color: yellow;
+            background-color: #FFF3CD; /* Light yellow */
+            color: #856404; /* Dark yellow text */
             font-weight: bold;
-            padding: 2px 4px;
-            border-radius: 3px;
+            padding: 2px 5px;
+            border-radius: 4px;
+            border: 1px solid #FFEEBA;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #555555;
+            font-style: italic;
         }
         .footer {
-            margin-top: 40px;
+            margin-top: 50px;
             text-align: center;
-            font-size: 0.9em;
-            color: #777;
+            font-size: 0.85em;
+            color: #888888;
+            border-top: 1px solid #eeeeee;
+            padding-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <h1>Privacy Policy - RoadReady G1 Ontario</h1>
+    <h1>Privacy Policy</h1>
+    <h2>RoadReady G1 Ontario App</h2>
 
-    <p><strong>Effective Date:</strong> <span class="placeholder">[Date - e.g., October 26, 2023]</span> <!-- Replace [Date] --> </p>
+    <p><strong>Effective Date:</strong> <span class="placeholder">[Insert Date - e.g., October 26, 2023]</span></p>
 
-    <p>This Privacy Policy describes how <span class="placeholder">[Your Name/Company Name]</span> <!-- Replace [Your Name/Company Name] --> ("we," "us," or "our") collects, uses, and discloses your information when you use our RoadReady G1 Ontario mobile application (the "App").</p>
+    <p>This Privacy Policy explains how <span class="placeholder">[Your Name / Your Company Name]</span> ("we," "us," or "our") collects, uses, stores, and protects your information when you use the RoadReady G1 Ontario mobile application (the "App"). Please read this policy carefully.</p>
+
+    <p class="note"><strong>Important Notice:</strong> This Privacy Policy is provided for informational purposes. Please consult with a legal professional to ensure compliance with all applicable laws and regulations.</p>
 
     <h2>1. Information We Collect</h2>
 
-    <p>We collect information to provide and improve the App, manage your account, and offer features like progress tracking and premium access. The types of information we collect include:</p>
+    <p>We collect different types of information depending on how you interact with the App:</p>
 
-    <h3>Account Information:</h3>
+    <h3>A. Information Collected for Anonymous Use:</h3>
     <ul>
-        <li><strong>Anonymous Usage:</strong> If you use the App without creating a permanent account, we use Firebase Authentication to generate a temporary anonymous user ID to save your progress locally (e.g., quiz scores, chapter completion, settings). This ID is not directly linked to your personal identity unless you choose to link your account.</li>
-        <li><strong>Linked Accounts:</strong> If you choose to link your anonymous account or sign up for a permanent account using Email/Password, Google Sign-In, or Sign in with Apple, we collect the necessary information provided by you or the authentication provider:
+        <li><strong>Anonymous User ID:</strong> If you use the App without creating a permanent account ("Guest Mode"), Firebase Authentication generates a temporary, unique anonymous user identifier (UID).</li>
+        <li><strong>Local Progress Data:</strong> We store your quiz progress (answers given, scores), chapter completion status, last accessed content (chapter/level), study streak data, mock exam attempts, favorited questions, list of incorrectly answered questions, and app preferences (like theme, language, audio settings) locally on your device using SharedPreferences.</li>
+        <li><p class="note">This local data is associated with your anonymous UID but is not directly linked to your personal identity by us unless you choose to link your account. If you uninstall the App or clear its data before linking, this anonymous data will likely be lost.</p></li>
+    </ul>
+
+    <h3>B. Information Collected When You Create or Link an Account:</h3>
+    <ul>
+        <li><strong>Firebase Authentication Data:</strong> When you sign up or link your anonymous account using Email/Password, Google Sign-In, or Sign in with Apple, we collect and store the following via Firebase Authentication:
             <ul>
-                <li><strong>Firebase Authentication:</strong> Your email address (for email/password), unique Firebase User ID (UID).</li>
-                <li><strong>Google Sign-In:</strong> Information authorized by you via Google, potentially including your name, email address, and Google User ID. This is used to create or link your Firebase account.</li>
-                <li><strong>Sign in with Apple:</strong> Information authorized by you via Apple, potentially including your name and email address (which may be a private relay address). This is used to create or link your Firebase account.</li>
+                <li>A permanent, unique Firebase User ID (UID).</li>
+                <li>If using Email/Password: Your provided email address.</li>
+                <li>If using Google Sign-In: Information authorized by you through Google, which may include your name, email address, and Google User ID.</li>
+                <li>If using Sign in with Apple: Information authorized by you through Apple, which may include your name and email address (this might be a private relay address provided by Apple).</li>
             </ul>
         </li>
-        <li>We store this account information securely using Firebase Authentication.</li>
+        <li><strong>Synced Progress Data:</strong> When you use a permanent account, the progress data listed in section 1.A is associated with your permanent Firebase UID and stored securely in Google's Firebase Firestore database. This allows your progress to potentially be synced across devices where you are logged in with the same account.</li>
     </ul>
 
-    <h3>App Usage and Progress Data:</h3>
+    <h3>C. Information Collected for Premium Subscriptions:</h3>
     <ul>
-        <li><strong>Stored Locally & Potentially Synced (linked to your UID in Firestore):</strong> Quiz answers, quiz scores (last score, high score), chapter completion status, last read chapter, last visited quiz level, study streak data, mock exam history, favorited questions, incorrect answers list, language preference, theme preference, audio playback settings (speed, repeat count). This data is stored against your Firebase User ID (anonymous or permanent) in Firebase Firestore to provide features like progress tracking and review modes.</li>
-    </ul>
-
-    <h3>Subscription and Purchase Information:</h3>
-    <ul>
-        <li><strong>Managed by RevenueCat & App Stores:</strong> If you purchase a premium subscription, the purchase process is handled by the respective app store (Apple App Store or Google Play Store) and our subscription management provider, RevenueCat. We <strong>do not</strong> directly collect or store your credit card or payment details.</li>
-        <li><strong>RevenueCat Data:</strong> RevenueCat receives your purchase information from the app store and associates it with your current Firebase User ID (provided via <code>Purchases.logIn</code>). We receive entitlement status (e.g., whether "premium" is active) and potentially subscription expiration dates from RevenueCat to unlock premium features in the App.</li>
-    </ul>
-
-    <h3>Device and Technical Information (Collected by Third-Party Services):</h3>
-    <ul>
-        <li>Our third-party service providers (Firebase, RevenueCat, Google Play Services, Apple Services) may automatically collect certain technical information necessary for the App's functionality, security, and improvement. This can include:
+        <li><strong>Purchase & Entitlement Data (via RevenueCat):</strong> If you purchase a premium subscription, the transaction is processed by the relevant app store (Apple App Store or Google Play Store). We use RevenueCat, a third-party service, to manage subscriptions and verify entitlements.
             <ul>
-                <li>Device identifiers (e.g., advertising ID, device ID for push notifications if implemented).</li>
-                <li>IP address (used for general location, fraud prevention, service delivery).</li>
-                <li>Operating system version, device model, app version.</li>
-                <li>Crash logs and performance data (e.g., via Firebase Crashlytics/Performance Monitoring, if used).</li>
-                <li>General usage analytics (e.g., screens visited, features used, session duration via Firebase Analytics, if used) often in an aggregated or anonymized form.</li>
+                <li>We **do not** receive or store your credit card number or other sensitive payment details.</li>
+                <li>RevenueCat receives purchase confirmation from the app store and associates it with your current Firebase User ID (which we provide to RevenueCat via their SDK's `logIn` function).</li>
+                <li>We receive information from RevenueCat about your subscription status (e.g., whether the "premium" entitlement is active) and potentially the expiration date of your subscription. This allows us to unlock premium features within the App for your account.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>D. Automatically Collected Technical Information:</h3>
+    <ul>
+        <li><strong>Service Providers' Data Collection:</strong> Our integrated third-party services (Firebase, RevenueCat, Google Play Services, Apple Services) automatically collect certain technical data required for their operation and for app improvement. This may include:
+            <ul>
+                <li>**Device Information:** Operating system type and version, device model, application version, screen resolution.</li>
+                <li>**Identifiers:** Potentially resettable device identifiers (like Advertising ID, if used by Firebase Analytics) or vendor identifiers. Firebase Authentication uses instance IDs for service operation.</li>
+                <li>**IP Address:** Used by services for functionality like region detection, service delivery, security, and fraud prevention.</li>
+                <li>**Crash and Performance Data:** If you experience a crash, anonymized or pseudonymized information about the crash event (device state, app version, stack trace) may be collected by Firebase Crashlytics (if enabled) to help us diagnose and fix issues.</li>
+                <li>**Usage Analytics:** Anonymized or aggregated data about how you interact with the App (e.g., screens visited, features used, session length) may be collected by Firebase Analytics (if enabled) to help us understand usage patterns and improve the App.</li>
             </ul>
         </li>
     </ul>
 
     <h2>2. How We Use Your Information</h2>
 
-    <p>We use the collected information for the following purposes:</p>
+    <p>We use the information we collect for the following purposes:</p>
     <ul>
-        <li>To provide, operate, and maintain the App's features (e.g., saving progress, unlocking premium content).</li>
-        <li>To authenticate you and manage your account (anonymous or permanent).</li>
-        <li>To process and manage your premium subscription status via RevenueCat.</li>
-        <li>To synchronize your progress across devices if you use a linked, permanent account.</li>
-        <li>To personalize your experience (e.g., theme, language, audio settings).</li>
-        <li>To analyze app usage, identify trends, diagnose problems, and improve the App's performance and features.</li>
-        <li>To communicate with you, such as sending password reset emails or responding to support requests.</li>
-        <li>To ensure the security of the App and prevent fraud.</li>
-        <li>To comply with legal obligations.</li>
+        <li><strong>To Provide and Operate the App:</strong> Delivering core functionality, saving your progress, managing study plans, offering quizzes and mock exams.</li>
+        <li><strong>To Manage Your Account:</strong> Authenticating you (anonymously or via linked account), linking anonymous progress to permanent accounts.</li>
+        <li><strong>To Provide Premium Features:</strong> Verifying your subscription status via RevenueCat and unlocking corresponding content and features.</li>
+        <li><strong>To Personalize Your Experience:</strong> Remembering your preferences like language, theme, and audio settings.</li>
+        <li><strong>To Sync Progress (for Linked Accounts):</strong> Allowing you to access your study progress and scores if you log in on another device.</li>
+        <li><strong>To Improve the App:</strong> Analyzing usage patterns, identifying popular features, diagnosing crashes and performance issues, and making enhancements.</li>
+        <li><strong>To Communicate With You:</strong> Sending essential service communications (like password reset emails) or responding to your support requests.</li>
+        <li><strong>For Security and Fraud Prevention:</strong> Protecting the integrity of the App and user accounts.</li>
+        <li><strong>To Comply with Legal Obligations:</strong> Fulfilling legal or regulatory requirements.</li>
     </ul>
 
-    <h2>3. Data Sharing and Disclosure</h2>
+    <h2>3. How We Share Your Information</h2>
 
-    <p>We do not sell your personal information. We may share your information only in the following circumstances:</p>
+    <p>We value your privacy and do not sell your personal information to third parties. We only share information under the following limited circumstances:</p>
     <ul>
-        <li><strong>With Service Providers:</strong> We share information with third-party service providers who help us operate the App:
+        <li><strong>With Third-Party Service Providers:</strong> We rely on trusted third-party companies to perform essential functions. We only share the information necessary for them to provide their services:
             <ul>
-                <li><strong>Google (Firebase):</strong> For authentication, database (Firestore), potentially analytics and crash reporting. (See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>)</li>
-                <li><strong>RevenueCat:</strong> For managing subscriptions and checking entitlements. (See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat Privacy Policy</a>)</li>
-                <li><strong>Apple / Google:</strong> For processing payments and authentication via their respective platforms. (See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>)</li>
+                <li><strong>Google (Firebase):</strong> Provides authentication, cloud database (Firestore), potentially analytics, and crash reporting services. Google has its own privacy policies governing its data use. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</li>
+                <li><strong>RevenueCat:</strong> Manages subscription processing and entitlement verification. See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat Privacy Policy</a>.</li>
+                <li><strong>Apple / Google:</strong> Process in-app purchases and provide authentication services (Sign in with Apple/Google). See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</li>
             </ul>
         </li>
-        <li><strong>For Legal Reasons:</strong> We may disclose information if required by law, subpoena, or other legal process, or if we believe in good faith that disclosure is necessary to protect our rights, protect your safety or the safety of others, investigate fraud, or respond to a government request.</li>
-        <li><strong>Business Transfers:</strong> If we are involved in a merger, acquisition, or asset sale, your information may be transferred as part of that transaction.</li>
+        <li><strong>For Legal Requirements:</strong> We may disclose your information if required to do so by law or in the good faith belief that such action is necessary to comply with a legal obligation, protect and defend our rights or property, prevent or investigate possible wrongdoing in connection with the App, protect the personal safety of users of the App or the public, or protect against legal liability.</li>
+        <li><strong>In Case of Business Transfer:</strong> If we are involved in a merger, acquisition, financing due diligence, reorganization, bankruptcy, receivership, sale of company assets, or transition of service to another provider, your information may be transferred as part of that transaction, as permitted by law and/or contract.</li>
     </ul>
 
     <h2>4. Data Security</h2>
 
-    <p>We rely on the security measures implemented by our service providers (Firebase, RevenueCat, Apple, Google) to protect your data. These typically include encryption for data in transit and at rest. However, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your information, we cannot guarantee its absolute security.</p>
+    <p>We rely on the security measures implemented by our chosen service providers (Firebase, RevenueCat, Apple, Google) which typically include measures like encryption of data in transit (TLS/SSL) and at rest. We implement reasonable administrative and technical safeguards within the App itself where applicable (e.g., secure handling of authentication tokens).</p>
+    <p>However, please be aware that no security measures are perfect or impenetrable. We cannot guarantee the absolute security of your information transmitted to or stored by us or our service providers.</p>
 
     <h2>5. Data Retention</h2>
 
-    <p>We retain your account information and associated progress data as long as your account is active or as needed to provide you with the App's services. Anonymous progress data is tied to the anonymous user ID and may be lost if the App is uninstalled or data is cleared before linking to a permanent account. We may retain certain information for longer periods if required by law or for legitimate business purposes like resolving disputes or enforcing our agreements.</p>
-
-    <h2>6. Your Privacy Rights</h2>
-
-    <p>Depending on your jurisdiction, you may have rights regarding your personal information, such as the right to access, correct, or delete your data.</p>
     <ul>
-        <li>You can typically manage your linked account information (e.g., password) through the App or the relevant provider (Google/Apple).</li>
-        <li>You can manage your subscription through the Apple App Store or Google Play Store.</li>
-        <li>If you wish to request deletion of your account and associated data stored in our Firebase database, please contact us at <a href="mailto:[Your Contact Email]"><span class="placeholder">[Your Contact Email]</span></a> <!-- Replace [Your Contact Email] -->. Please note that deleting your account is irreversible and will remove your progress and premium status. We may need to retain certain information for legal or operational reasons.</li>
+        <li><strong>Anonymous Data:** Locally stored progress data associated with an anonymous UID is retained on your device until you clear the app's data, uninstall the App, or link the account. If linked, it becomes associated with your permanent UID.</li>
+        <li><strong>Permanent Account Data:** Information linked to your permanent Firebase UID (including synced progress from Firestore and entitlement status linked via RevenueCat) is retained as long as your account remains active or as necessary to provide the service, resolve disputes, enforce our agreements, or comply with legal obligations.</li>
+        <li><strong>Subscription Data:** Subscription status managed by RevenueCat is retained according to their policies and linked to your UID.</li>
+        <li><strong>Technical Data:** Retention periods for automatically collected technical data are determined by our third-party service providers according to their respective policies.</li>
     </ul>
 
-    <h2>7. Children's Privacy</h2>
+    <h2>6. Your Privacy Choices and Rights</h2>
 
-    <p>The App is not intended for use by children under the age of 16. We do not knowingly collect personal information from children under 16. If you are a parent or guardian and believe your child has provided us with information, please contact us at <a href="mailto:[Your Contact Email]"><span class="placeholder">[Your Contact Email]</span></a> <!-- Replace [Your Contact Email] --> so we can take appropriate action.</p>
+    <ul>
+        <li><strong>Account Information:** You can typically access and update certain account information (e.g., password for email accounts) through the App's settings or via the authentication provider (Google/Apple).</li>
+        <li><strong>Subscription Management:** You can manage or cancel your premium subscription directly through your Apple App Store or Google Play Store account settings.</li>
+        <li><strong>Access, Correction, Deletion:** Depending on your jurisdiction, you may have the right to request access to, correction of, or deletion of the personal information associated with your permanent account stored in our Firebase database. To make such a request, please contact us at <a href="mailto:hadeedzahi@gmail.com"><span class="placeholder">hadeedzahi@gmail.com</span></a>. We will respond to your request in accordance with applicable law. Please note that deleting your account is irreversible and will result in the loss of all progress and any active premium subscription tied to that account UID. We may need to retain certain residual information for backup, archival, fraud prevention, or legal compliance purposes.</li>
+        <li><strong>Anonymous Data:** As anonymous data is stored locally and tied to a temporary ID, we generally cannot access, modify, or delete it remotely. You can typically clear this data by clearing the App's storage in your device settings or by uninstalling the App.</li>
+    </ul>
 
-    <h2>8. Changes to This Privacy Policy</h2>
+    <h2>7. International Data Transfers</h2>
 
-    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy within the App and updating the "Effective Date" at the top. You are advised to review this Privacy Policy periodically for any changes.</p>
+    <p>Our service providers, including Google (Firebase) and RevenueCat, operate globally. Your information may be transferred to, processed, and stored in countries outside of Canada, including the United States, where data protection laws may differ from those in your jurisdiction. By using the App, you consent to this transfer, processing, and storage of your information in these countries.</p>
 
-    <h2>9. Contact Us</h2>
+    <h2>8. Children's Privacy</h2>
 
-    <p>If you have any questions about this Privacy Policy, please contact us at:<br>
-    <a href="mailto:[Your Contact Email]"><span class="placeholder">[Your Contact Email]</span></a> <!-- Replace [Your Contact Email] -->
-    </p>
+    <p>The App is not directed to individuals under the age of 16. We do not knowingly collect personal information from children under 16. If we become aware that we have collected personal information from a child under 16 without verification of parental consent, we take steps to remove that information from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us at <a href="mailto:hadeedzahi@gmail.com"><span class="placeholder">hadeedzahi@gmail.com</span></a>.</p>
+
+    <h2>9. Changes to This Privacy Policy</h2>
+
+    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy within the App and updating the "Effective Date" at the top of this policy. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted.</p>
+
+    <h2>10. Contact Us</h2>
+
+    <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+    <p>By email: <a href="mailto:hadeedzahi@gmail.com"><span class="placeholder">hadeedzahi@gmail.com</span></a></p>
 
     <div class="footer">
-        <p>© <span id="year"></span> <span class="placeholder">[Your Name/Company Name]</span>. All rights reserved.</p>
+        <p>© <span id="year"></span> <span class="placeholder">RoadReady Dev</span>. All rights reserved.</p>
+        <p class="note">This policy template is provided for informational purposes only and does not constitute legal advice. Please consult with a legal professional.</p>
     </div>
 
     <script>
+        // Simple script to set the current year in the footer
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 
