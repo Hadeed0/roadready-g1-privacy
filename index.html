@@ -46,19 +46,19 @@
         p {
             margin-bottom: 15px;
         }
-        strong, b {
-            font-weight: 600; /* Semibold for better readability */
+        strong, b { /* This CSS rule makes <strong> and <b> appear the same */
+            font-weight: 600;
         }
         a {
-            color: #007AFF; /* Apple blue for links */
+            color: #007AFF;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
         .placeholder {
-            background-color: #FFF3CD; /* Light yellow */
-            color: #856404; /* Dark yellow text */
+            background-color: #FFF3CD;
+            color: #856404;
             font-weight: bold;
             padding: 2px 5px;
             border-radius: 4px;
@@ -101,7 +101,8 @@
 
     <h3>B. Information Collected When You Create or Link an Account:</h3>
     <ul>
-        <li><strong>Firebase Authentication Data:</strong> When you sign up or link your anonymous account using Email/Password, Google Sign-In, or Sign in with Apple, we collect and store the following via Firebase Authentication:
+        <li>
+            <strong>Firebase Authentication Data:</strong> When you sign up or link your anonymous account using Email/Password, Google Sign-In, or Sign in with Apple, we collect and store the following via Firebase Authentication:
             <ul>
                 <li>A permanent, unique Firebase User ID (UID).</li>
                 <li>If using Email/Password: Your provided email address.</li>
@@ -109,15 +110,17 @@
                 <li>If using Sign in with Apple: Information authorized by you through Apple, which may include your name and email address (this might be a private relay address provided by Apple).</li>
             </ul>
         </li>
-        <li><strong>Synced Account Information and Locally Stored Progress Data:</strong> When you create or log into a permanent account in the RoadReady G1 Ontario application (e.g., by signing up with email and password, or using Google Sign-In or Apple Sign-In), certain account-specific information, primarily your premium subscription status (including active status, subscription type, and expiration date if applicable) and your account type (anonymous or permanent), is associated with your unique Firebase User ID (UID) and stored securely using Google's Firebase services like Firebase Firestore. This synchronization of premium status is essential for providing consistent access to premium features across different devices where you are logged in with the same permanent account. However, the majority of your application usage data, detailed learning progress, and personalized settings—such as which study chapters you have read or completed, your answers to quiz questions, scores achieved on practice quizzes, quiz attempt history, questions marked as "favorite," logs of incorrectly answered questions for the "Review Mistakes" feature, mock exam attempt history, your daily study streak, and app preferences like selected theme, audio narration speed, repeat count settings, and preferred interface language—are stored locally on the specific device you are using. This locally stored data is managed by the application on your device and is not automatically synced to our servers or across your other devices. Consequently, if you uninstall the application or use it on multiple devices, this local progress and settings data will generally not transfer, with the exception of your premium subscription status. We are continually working to improve our services, and our data storage and synchronization practices may evolve; any significant changes will be updated in this Privacy Policy.
+        <li>
+            <strong>Synced Account Information and Locally Stored Progress Data:</strong> When you create or log into a permanent account in the RoadReady G1 Ontario application (e.g., by signing up with email and password, or using Google Sign-In or Apple Sign-In), certain account-specific information, primarily your <strong>premium subscription status</strong> (including active status, subscription type, and expiration date if applicable) and your account type (anonymous or permanent), is associated with your unique Firebase User ID (UID) and stored securely using Google's Firebase services like Firebase Firestore. This synchronization of premium status is essential for providing consistent access to premium features across different devices where you are logged in with the same permanent account. However, the majority of your application usage data, detailed learning progress, and personalized settings—such as which study chapters you have read or completed, your answers to quiz questions, scores achieved on practice quizzes, quiz attempt history, questions marked as "favorite," logs of incorrectly answered questions for the "Review Mistakes" feature, mock exam attempt history, your daily study streak, and app preferences like selected theme, audio narration speed, repeat count settings, and preferred interface language—are stored <strong>locally on the specific device you are using</strong>. This locally stored data is managed by the application on your device and is not automatically synced to our servers or across your other devices. Consequently, if you uninstall the application or use it on multiple devices, this local progress and settings data will generally not transfer, with the exception of your premium subscription status. We are continually working to improve our services, and our data storage and synchronization practices may evolve; any significant changes will be updated in this Privacy Policy.
         </li>
     </ul>
 
     <h3>C. Information Collected for Premium Subscriptions:</h3>
     <ul>
-        <li><strong>Purchase & Entitlement Data (via RevenueCat):</strong> If you purchase a premium subscription, the transaction is processed by the relevant app store (Apple App Store or Google Play Store). We use RevenueCat, a third-party service, to manage subscriptions and verify entitlements.
+        <li>
+            <strong>Purchase & Entitlement Data (via RevenueCat):</strong> If you purchase a premium subscription, the transaction is processed by the relevant app store (Apple App Store or Google Play Store). We use RevenueCat, a third-party service, to manage subscriptions and verify entitlements.
             <ul>
-                <li>We **do not** receive or store your credit card number or other sensitive payment details.</li>
+                <li>We <strong>do not</strong> receive or store your credit card number or other sensitive payment details.</li>
                 <li>RevenueCat receives purchase confirmation from the app store and associates it with your current Firebase User ID (which we provide to RevenueCat via their SDK's `logIn` function).</li>
                 <li>We receive information from RevenueCat about your subscription status (e.g., whether the "premium" entitlement is active) and potentially the expiration date of your subscription. This allows us to unlock premium features within the App for your account.</li>
             </ul>
@@ -126,13 +129,14 @@
 
     <h3>D. Automatically Collected Technical Information:</h3>
     <ul>
-        <li><strong>Service Providers' Data Collection:</strong> Our integrated third-party services (Firebase, RevenueCat, Google Play Services, Apple Services) automatically collect certain technical data required for their operation and for app improvement. This may include:
+        <li>
+            <strong>Service Providers' Data Collection:</strong> Our integrated third-party services (Firebase, RevenueCat, Google Play Services, Apple Services) automatically collect certain technical data required for their operation and for app improvement. This may include:
             <ul>
-                <li><strong>Device Information:** Operating system type and version, device model, application version, screen resolution.</li>
-                <li><strong>Identifiers:** Potentially resettable device identifiers (like Advertising ID, if used by Firebase Analytics) or vendor identifiers. Firebase Authentication uses instance IDs for service operation.</li>
-                <li><strong>IP Address:** Used by services for functionality like region detection, service delivery, security, and fraud prevention.</li>
-                <li><strong>Crash and Performance Data:** If you experience a crash, anonymized or pseudonymized information about the crash event (device state, app version, stack trace) may be collected by Firebase Crashlytics (if enabled by us) to help us diagnose and fix issues.</li>
-                <li><strong>Usage Analytics:** Anonymized or aggregated data about how you interact with the App (e.g., screens visited, features used, session length) may be collected by Firebase Analytics (if enabled by us) to help us understand usage patterns and improve the App.</li>
+                <li><strong>Device Information:</strong> Operating system type and version, device model, application version, screen resolution.</li>
+                <li><strong>Identifiers:</strong> Potentially resettable device identifiers (like Advertising ID, if used by Firebase Analytics) or vendor identifiers. Firebase Authentication uses instance IDs for service operation.</li>
+                <li><strong>IP Address:</strong> Used by services for functionality like region detection, service delivery, security, and fraud prevention.</li>
+                <li><strong>Crash and Performance Data:</strong> If you experience a crash, anonymized or pseudonymized information about the crash event (device state, app version, stack trace) may be collected by Firebase Crashlytics (if enabled by us) to help us diagnose and fix issues.</li>
+                <li><strong>Usage Analytics:</strong> Anonymized or aggregated data about how you interact with the App (e.g., screens visited, features used, session length) may be collected by Firebase Analytics (if enabled by us) to help us understand usage patterns and improve the App.</li>
             </ul>
         </li>
     </ul>
@@ -156,7 +160,8 @@
 
     <p>We value your privacy and do not sell your personal information to third parties. We only share information under the following limited circumstances:</p>
     <ul>
-        <li><strong>With Third-Party Service Providers:</strong> We rely on trusted third-party companies to perform essential functions. We only share the information necessary for them to provide their services:
+        <li>
+            <strong>With Third-Party Service Providers:</strong> We rely on trusted third-party companies to perform essential functions. We only share the information necessary for them to provide their services:
             <ul>
                 <li><strong>Google (Firebase):</strong> Provides authentication, cloud database (Firestore for premium status), potentially analytics, and crash reporting services. Google has its own privacy policies governing its data use. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</li>
                 <li><strong>RevenueCat:</strong> Manages subscription processing and entitlement verification. See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat Privacy Policy</a>.</li>
@@ -176,7 +181,7 @@
 
     <ul>
         <li><strong>Anonymous Data:</strong> Locally stored progress data associated with an anonymous UID is retained on your device until you clear the app's data, uninstall the App, or link the account. If linked, it becomes associated with your permanent UID, but the progress data itself remains local to the device where it was generated unless explicitly synced by future features.</li>
-        <li><strong>Permanent Account Data:</strong> Information linked to your permanent Firebase UID (such as your premium entitlement status via RevenueCat, which is associated with data in Firebase Firestore) is retained as long as your account remains active or as necessary to provide the service, resolve disputes, enforce our agreements, or comply with legal obligations.</li>
+        <li><strong>Permanent Account Data:</strong> Information linked to your permanent Firebase UID (such as your <strong>premium entitlement status</strong> via RevenueCat, which is associated with data in Firebase Firestore) is retained as long as your account remains active or as necessary to provide the service, resolve disputes, enforce our agreements, or comply with legal obligations.</li>
         <li><strong>Subscription Data:</strong> Subscription status managed by RevenueCat is retained according to their policies and linked to your UID.</li>
         <li><strong>Technical Data:</strong> Retention periods for automatically collected technical data are determined by our third-party service providers according to their respective policies.</li>
     </ul>
